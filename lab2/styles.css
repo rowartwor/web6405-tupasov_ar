@@ -1,0 +1,129 @@
+body {
+    font: 14px sans-serif;
+    color:darkgrey;
+    background: black;   
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3px 1px;
+    gap: 1px;
+}
+
+.menu a {
+    color: darkgrey;
+    text-decoration: none;
+    padding: 11px 20px;
+    background-color: #2b2b2b;
+    border-radius: 4px;
+    border: 1px solid #3b3b3b;
+    display: inline-block;
+}
+
+#hot a {
+    color: white;
+    background: linear-gradient(to top right, #ff416c, #ff4b2b);
+    font-weight: bold;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 20px;
+    background: #585858;
+    border: 1px solid #777777;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+.carousel img {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #333333;
+    border-radius: 4px;
+}
+
+.card {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 5px;
+    background: #2b2b2b;;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.card img {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.card__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 10px;
+}
+
+.card__list span {
+    color: #888888;
+    font-style: italic;
+    margin-right: 2px;
+}
+
+.card h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    width: 15%;
+    flex-shrink: 0;
+}
+
+b {
+    font-weight: bold;
+}
+
+.premieres {
+    width: 100%;
+    background: #111111;
+    margin-bottom: 5px;
+}
+
+.premieres caption {
+    padding: 10px;
+    color: #888888;
+    font-style: italic;
+}
+
+.premieres th,
+.premieres td {
+    padding: 10px;
+    border: 1px solid #333333;
+}
+
+.premieres th {
+    background: #2b2b2b;
+    color: white;
+}
+
+.premieres th:first-child,
+.premieres td:first-child {
+    text-align: left;
+}
+
+.premieres th:nth-child(2),
+.premieres td:nth-child(2),
+.premieres th:nth-child(3),
+.premieres td:nth-child(3) {
+    text-align: center;
+}
+
+.premieres th:last-child,
+.premieres td:last-child {
+    text-align: right;
+}
