@@ -1,0 +1,177 @@
+:root {
+    --color-bg: black;
+    --color-text: darkgrey;
+    --color-text-muted: #888888;
+    --color-text-inverse: white;
+
+    --color-surface: #2b2b2b;
+    --color-surface-dark: #111111;
+    --color-surface-light: #585858;
+
+    --color-border: #333333;
+    --color-border-light: #3b3b3b;
+    --color-border-mid: #777777;
+
+    --color-accent-start: #ff416c;
+    --color-accent-end: #ff4b2b;
+
+    --color-hover: #3a3a3a;
+    --color-accent-glow: rgba(255, 65, 108, 0.5);
+    --color-shine: rgba(255, 255, 255, 0.5);  
+}
+
+body {
+    font: 14px sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    display: grid;
+    gap: 5px;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, max-content) 1fr;
+    justify-content: start;
+    margin: 3px 1px 0px;
+    gap: 2px;
+}
+
+.menu a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 11px 20px;
+    background-color: var(--color-surface);
+    border-radius: 4px;
+    border: 1px solid var(--color-border-light);
+    display: inline-block;
+    transition:
+        color 0.25s ease,
+        background-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.menu a:hover {
+    color: var(--color-text-inverse);
+    background-color: var(--color-hover);
+}
+
+#hot a:hover {
+    box-shadow: 0 0 12px var(--color-accent-glow);
+}
+
+#hot a {
+    color: var(--color-text-inverse);
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to top right, var(--color-accent-start), var(--color-accent-end));
+}
+
+#hot a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--color-shine), transparent);
+    transform: skewX(-20deg);
+    animation: shine-sweep 3s ease-in-out infinite;
+}
+
+@keyframes shine-sweep {
+    0%   { left: -75%; }
+    60%  { left: 125%; }
+    100% { left: 125%; }
+}
+
+.menu__login {
+    justify-self: end;
+}
+
+.menu__login a {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 150px 150px 1fr;
+    gap: 20px;
+    background: var(--color-surface);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.card img {
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.card__list {
+    display: grid;
+    justify-items: end;
+    margin-bottom: 10px;
+}
+
+.card__list span {
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin-right: 2px;
+}
+
+.card h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-text-inverse);
+}
+
+.card__text {
+  line-height: 1.25;
+}
+
+b {
+    font-weight: bold;
+}
+
+.premieres {
+    width: 100%;
+    background: var(--color-surface-dark);
+    margin-bottom: 5px;
+}
+
+.premieres caption {
+    padding: 10px;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.premieres th,
+.premieres td {
+    padding: 10px;
+    border: 1px solid var(--color-border);
+}
+
+.premieres th {
+    background: var(--color-surface);
+    color: var(--color-text-inverse);
+}
+
+.premieres th:first-child,
+.premieres td:first-child {
+    text-align: left;
+}
+
+.premieres th:nth-child(2),
+.premieres td:nth-child(2),
+.premieres th:nth-child(3),
+.premieres td:nth-child(3) {
+    text-align: center;
+}
+
+.premieres th:last-child,
+.premieres td:last-child {
+    text-align: right;
+}

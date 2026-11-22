@@ -1,0 +1,59 @@
+:root {
+    --color-bg: black;
+    --color-text: darkgrey;
+    --color-text-inverse: white;
+
+    --color-surface: #2b2b2b;
+    --color-surface-dark: #111111;
+
+    --color-border-light: #3b3b3b;
+
+    --color-accent-start: #ff416c;
+    --color-accent-end: #ff4b2b;
+}
+
+body {
+    font: 14px sans-serif;
+    color: var(--color-text);
+    background: var(--color-bg);
+    display: grid;
+    place-items: center;
+}
+
+.login {
+    display: grid;
+    gap: 15px;
+    background: var(--color-surface);
+    padding: 25px;
+    border-radius: 4px;
+    width: 300px;
+    margin-top: 200px;
+}
+
+.login h2 {
+    color: var(--color-text-inverse);
+    font-size: 20px;
+}
+
+.login label {
+    display: grid;
+    gap: 5px;
+}
+
+.login input[type="text"],
+.login input[type="password"] {
+    padding: 8px 10px;
+    background: var(--color-surface-dark);
+    border: 1px solid var(--color-border-light);
+    border-radius: 4px;
+    color: var(--color-text-inverse);
+}
+
+.login button {
+    padding: 10px;
+    background: linear-gradient(to top right, var(--color-accent-start), var(--color-accent-end));
+    color: var(--color-text-inverse);
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+}
